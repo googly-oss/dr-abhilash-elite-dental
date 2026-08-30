@@ -85,17 +85,23 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 /* Clean mobile redesign */
 @media (max-width: 700px){
   .topbar, .top-strip {font-size:14px !important; line-height:1.45 !important; padding:12px 18px !important;}
-  .brand, .brandWrap, .logoWrap {gap:12px !important;}
-  .brand strong, .brandTitle {font-size:20px !important; line-height:1.15 !important;}
-  .brand span, .brandSub {font-size:12px !important; letter-spacing:1.5px !important; line-height:1.35 !important;}
-  .logo, .clinic-logo {width:78px !important; height:78px !important;}
+  /* Keep clinic identity clearly visible on mobile */
+  nav {display:block !important; height:94px !important;}
+  .navin {display:flex !important; height:94px !important; gap:10px !important;}
+  .logo {display:flex !important; flex:1 !important; min-width:0 !important; gap:11px !important;}
+  .logoImg {width:64px !important; height:64px !important; flex:0 0 64px !important; border-radius:50% !important;}
+  .brand {display:block !important; min-width:0 !important;}
+  .brand strong {font-size:18px !important; line-height:1.12 !important; white-space:normal !important;}
+  .brand span {font-size:9px !important; letter-spacing:1.25px !important; line-height:1.35 !important;}
+  .navlinks {display:none !important;}
+  .navcall {display:flex !important; align-items:center !important; justify-content:center !important; width:58px !important; height:58px !important; padding:0 !important; border-radius:18px !important; font-size:0 !important; flex:0 0 58px !important;}
+  .navcall::before {content:"☎"; font-size:24px !important;}
   .phoneBtn, .callBtn {padding:18px 20px !important; font-size:18px !important; border-radius:20px !important;}
   .hero {min-height:auto !important; padding:72px 28px 90px !important;}
   .hero h1 {font-size:72px !important; line-height:.98 !important; letter-spacing:-2px !important; max-width:600px !important;}
   .hero .eyebrow {font-size:14px !important; line-height:1.7 !important; letter-spacing:3px !important; margin-bottom:26px !important;}
   .hero p {font-size:21px !important; line-height:1.55 !important; max-width:360px !important;}
   .hero .btn, .hero .btn.primary {padding:19px 24px !important; font-size:18px !important; width:auto !important;}
-  .nav, nav {display:none !important;}
   .serviceGrid, .servicesGrid {grid-template-columns:1fr 1fr !important; gap:10px !important;}
   .serviceCard {padding:22px 12px !important;}
 }
