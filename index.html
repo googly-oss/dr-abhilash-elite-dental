@@ -3,310 +3,330 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dr. Abhilash’s Elite Dental Clinic | Nazira, Assam</title>
-<meta name="description" content="Dr. Abhilash’s Elite Dental Clinic in Nazira, Assam. Modern, personalised dental care.">
-<meta name="theme-color" content="#0a274b">
+<meta name="theme-color" content="#102b4b">
+<title>Dr. Abhilash’s Elite Dental Clinic</title>
 <style>
 :root{
- --navy:#0a274b;--deep:#071f3b;--blue:#2c9fbd;--cyan:#63c6e3;
- --cream:#f7f9fb;--white:#fff;--text:#263950;--muted:#68758a;
- --line:#e2e8ef;--soft:#eaf7fa;--green:#20c56b;--gold:#efb638;
+  --navy:#112d4d;
+  --deep:#091f37;
+  --blue:#58b8d6;
+  --text:#263b55;
+  --muted:#667589;
+  --line:#e4e9ee;
+  --bg:#f8fafc;
+  --green:#25d366;
+  --gold:#a88743;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
-.top{background:var(--deep);color:#dceaf3;font-size:13px}
-.top .container{padding:11px 0;display:flex;justify-content:space-between;gap:20px}
-nav{height:82px;background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);box-shadow:0 5px 18px #071f3b0a}
-.navin{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:flex;align-items:center;gap:12px}.logoImg{width:62px;height:62px;border-radius:50%;object-fit:cover}
-.brand strong{display:block;color:var(--navy);font-size:16px;line-height:1.15}
-.brand span{font-size:9px;letter-spacing:1.6px;color:#a67d28;font-weight:800;text-transform:uppercase}
-.navlinks{display:flex;gap:20px;font-size:13px;font-weight:750}.navlinks a:hover{color:var(--blue)}
-.navcall{background:var(--navy);color:white;padding:12px 18px;border-radius:12px;font-size:14px;font-weight:800;white-space:nowrap}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
 
-.hero{min-height:610px;display:flex;align-items:center;position:relative;
-background:linear-gradient(90deg,rgba(5,27,54,.96) 0%,rgba(7,31,59,.88) 46%,rgba(7,31,59,.22) 75%,rgba(7,31,59,.05) 100%),url("assets/hero-treatment.jpg") center/cover no-repeat}
-.heroInner{padding:90px 0}.eyebrow{color:var(--cyan);font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-.hero h1{font-size:clamp(46px,6vw,78px);line-height:1.04;letter-spacing:-2.8px;color:#fff;margin:0;max-width:650px}
-.hero h1 span{color:var(--cyan)}.lead{font-size:19px;color:#d7e3ed;max-width:530px;margin:22px 0 28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 22px;border-radius:12px;font-weight:850;font-size:14px}
-.primary{background:linear-gradient(135deg,#39b8d7,#278dae);color:#fff;box-shadow:0 12px 28px #0003}
-.outline{border:1px solid #b9d2de;color:#fff;margin-left:10px}
+/* ADDRESS BAR */
+.topbar{background:var(--navy);color:#eef4f8}
+.topbar .container{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px;font-size:15px;letter-spacing:.1px}
+.address{display:flex;align-items:center;gap:8px}
+.topnote{opacity:.9}
 
-.section{padding:88px 0}.section.alt{background:#fff}.heading{text-align:center;max-width:700px;margin:0 auto 42px}
-.tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:900;color:var(--blue)}
-.heading h2{font-size:clamp(31px,4vw,46px);line-height:1.1;letter-spacing:-1.4px;color:var(--deep);margin:8px 0 12px}
-.heading p{margin:0;color:var(--muted)}
+/* MAIN HEADER */
+.header{background:#fff;border-bottom:1px solid #e7ebef;position:relative;z-index:30}
+.header .container{min-height:104px;display:flex;align-items:center;gap:28px}
+.identity{display:flex;align-items:center;gap:16px;min-width:0}
+.identity img{width:78px;height:78px;border-radius:50%;object-fit:cover;background:#000;flex:none}
+.brand{min-width:0}
+.brand h1{margin:0;color:#203650;font-size:23px;line-height:1.15;font-weight:800}
+.brand p{margin:8px 0 0;color:var(--gold);font-size:11px;letter-spacing:2.1px;font-weight:800;text-transform:uppercase}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:28px;font-size:15px;font-weight:700;color:#3a4b61}
+.navlinks a:hover{color:#168cac}
+.menuBtn{display:none;margin-left:auto;border:0;width:74px;height:74px;border-radius:22px;background:#eef3f7;color:#213b59;cursor:pointer;position:relative}
+.menuBtn span,.menuBtn:before,.menuBtn:after{content:"";position:absolute;width:32px;height:4px;border-radius:10px;background:#28435f;left:21px}
+.menuBtn span{top:35px}.menuBtn:before{top:23px}.menuBtn:after{top:47px}
 
-.doctorGrid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
-.photoPlaceholder{height:500px;border:2px dashed #b7c9d8;border-radius:28px;background:linear-gradient(145deg,#f8fcfd,#edf5f8);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#728399}
-.photoPlaceholder .photoIcon{font-size:52px;margin-bottom:10px}.photoPlaceholder b{font-size:17px;color:#52677e}.photoPlaceholder span{font-size:14px}
-.doctorText h2{font-size:43px;line-height:1.1;color:var(--deep);margin:8px 0 14px;letter-spacing:-1.4px}
-.doctorText p{color:var(--muted);font-size:16px}.role{display:inline-block;background:#edf6fa;border:1px solid #cfe1ea;color:#24607a;padding:6px 13px;border-radius:999px;font-size:13px;font-weight:850}
-.points{margin:25px 0}.point{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
-.pointIcon{width:43px;height:43px;min-width:43px;border-radius:13px;background:var(--soft);display:grid;place-items:center;font-size:20px}
-.point b{display:block;color:var(--deep)}.point span{font-size:13px;color:var(--muted)}
-.doctorExtras{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-.extra{border:1px dashed #c5d3df;border-radius:16px;padding:17px;background:#fbfdfe}.extra b{display:block;color:var(--deep)}.extra span{font-size:12px;color:var(--muted)}
-
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}
-.icon{width:50px;height:50px;background:var(--soft);border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:15px}
-.service h3{margin:0 0 7px;color:var(--deep);font-size:17px}.service p{margin:0;color:var(--muted);font-size:13px}
-
-.results{background:#effaf8}.resultsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.resultCard{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.resultCard img{width:100%;height:340px;object-fit:cover;display:block}.resultText{padding:15px 17px}.resultText b{color:var(--deep);display:block}.resultText span{font-size:12px;color:var(--muted)}
-
-.reviewSection{background:var(--deep)}.reviewSection .heading h2{color:#fff}.reviewSection .heading p{color:#bfd1dc}
-.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.review{background:#0d3553;border:1px solid #24516f;border-radius:20px;padding:23px;color:#fff}
-.stars{color:var(--gold);letter-spacing:2px}.review p{color:#d7e5ec;font-size:14px}.review b{font-size:13px}
-.reviewAction{text-align:center;margin-top:28px}.reviewAction a{color:#fff;border:1px solid #7092a8;border-radius:10px;padding:12px 20px;font-size:14px;font-weight:800}
-
-.gallery{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:220px 220px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:17px}.gallery img:first-child{grid-row:span 2}
-
-.contact{background:linear-gradient(135deg,#e7f8f6,#f9ffff)}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contactCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
-.contactCard h3{margin-top:0;color:var(--deep)}.row{display:flex;gap:13px;margin:18px 0;color:var(--muted);font-size:14px}.row b{color:var(--deep)}.ci{width:42px;height:42px;min-width:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center}
-.mapLink{display:block;margin-top:15px;background:var(--navy);color:white;padding:14px 18px;border-radius:12px;text-align:center;font-weight:800}
-.mapPreview{margin-top:20px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#eef4f6}
-.mapPreview iframe{width:100%;height:320px;border:0;display:block}
-.mapOpen{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;background:#fff;color:var(--navy);border:1px solid #cddbe3;padding:13px 18px;border-radius:12px;font-weight:850;width:100%}
-.mapOpen:hover{background:#f3f8fa}
-footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}.foot strong{color:#fff}
-.wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 14px 35px #0003;z-index:60}
-
-@media(max-width:850px){
- .top .container{justify-content:center;text-align:center;font-size:12px}.top span:last-child{display:none}
- nav{height:76px}.logoImg{width:55px;height:55px}.brand strong{font-size:13px}.navlinks{display:none}.navcall{padding:10px 12px;font-size:12px}
- .hero{min-height:620px;background-position:65% center}.heroInner{padding:70px 0 90px}.hero h1{font-size:52px;letter-spacing:-2px}.lead{font-size:17px;max-width:390px}.outline{display:none}
- .section{padding:70px 0}.doctorGrid,.contactGrid{grid-template-columns:1fr;gap:32px}.photoPlaceholder{height:390px}.doctorText h2{font-size:36px}
- .services,.resultsGrid,.reviewGrid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery img:first-child{grid-column:span 2;grid-row:auto}
+/* HERO */
+.hero{
+  min-height:650px;
+  display:flex;align-items:center;
+  background:
+   linear-gradient(90deg,rgba(7,26,48,.97) 0%,rgba(7,28,52,.91) 43%,rgba(7,28,52,.45) 69%,rgba(7,28,52,.10) 100%),
+   url("assets/hero-treatment.jpg") center/cover no-repeat;
 }
+.heroContent{padding:80px 0 86px;max-width:720px}
+.kicker{color:#7ecce5;font-size:14px;letter-spacing:3px;font-weight:800;text-transform:uppercase;margin-bottom:22px}
+.hero h2{margin:0;color:white;font-size:clamp(58px,7vw,88px);line-height:.98;letter-spacing:-3px;font-weight:800}
+.hero h2 span{color:#62c4e1}
+.heroText{margin:26px 0 30px;color:#d8e2eb;font-size:20px;line-height:1.6;max-width:530px}
+.primaryBtn{display:inline-flex;align-items:center;justify-content:center;padding:17px 26px;border-radius:14px;background:linear-gradient(135deg,#59c1df,#2d8eac);color:#fff;font-weight:800;font-size:16px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
 
-/* Clean mobile redesign */
-@media (max-width: 700px){
-  .topbar, .top-strip {font-size:14px !important; line-height:1.45 !important; padding:12px 18px !important;}
-  /* Keep clinic identity clearly visible on mobile */
-  nav {display:block !important; height:94px !important;}
-  .navin {display:flex !important; height:94px !important; gap:10px !important;}
-  .logo {display:flex !important; flex:1 !important; min-width:0 !important; gap:11px !important;}
-  .logoImg {width:64px !important; height:64px !important; flex:0 0 64px !important; border-radius:50% !important;}
-  .brand {display:block !important; min-width:0 !important;}
-  .brand strong {font-size:18px !important; line-height:1.12 !important; white-space:normal !important;}
-  .brand span {font-size:9px !important; letter-spacing:1.25px !important; line-height:1.35 !important;}
-  .navlinks {display:none !important;}
-  .navcall {display:flex !important; align-items:center !important; justify-content:center !important; width:58px !important; height:58px !important; padding:0 !important; border-radius:18px !important; font-size:0 !important; flex:0 0 58px !important;}
-  .navcall::before {content:"☎"; font-size:24px !important;}
-  .phoneBtn, .callBtn {padding:18px 20px !important; font-size:18px !important; border-radius:20px !important;}
-  .hero {min-height:auto !important; padding:72px 28px 90px !important;}
-  .hero h1 {font-size:72px !important; line-height:.98 !important; letter-spacing:-2px !important; max-width:600px !important;}
-  .hero .eyebrow {font-size:14px !important; line-height:1.7 !important; letter-spacing:3px !important; margin-bottom:26px !important;}
-  .hero p {font-size:21px !important; line-height:1.55 !important; max-width:360px !important;}
-  .hero .btn, .hero .btn.primary {padding:19px 24px !important; font-size:18px !important; width:auto !important;}
-  .serviceGrid, .servicesGrid {grid-template-columns:1fr 1fr !important; gap:10px !important;}
-  .serviceCard {padding:22px 12px !important;}
-}
+/* GENERAL */
+section{padding:84px 0}
+.sectionHead{text-align:center;max-width:720px;margin:0 auto 44px}
+.tag{font-size:11px;text-transform:uppercase;letter-spacing:2.4px;color:#3298b8;font-weight:800}
+.sectionHead h3{font-size:42px;line-height:1.1;margin:10px 0;color:var(--deep)}
+.sectionHead p{color:var(--muted);margin:0}
 
+/* DOCTOR */
+.doctor{background:#fff}
+.doctorGrid{display:grid;grid-template-columns:1fr 1fr;gap:62px;align-items:center}
+.photoPlaceholder{height:480px;border:2px dashed #c7d3dc;border-radius:30px;background:linear-gradient(145deg,#f8fbfd,#eef4f7);display:flex;align-items:center;justify-content:center;color:#8091a0;text-align:center}
+.photoPlaceholder small{display:block;margin-top:8px}
+.role{display:inline-block;padding:9px 18px;border-radius:999px;background:#eef7fa;border:1px solid #cfe1e9;color:#385d70;font-weight:800;font-size:14px}
+.doctorInfo h3{font-size:48px;margin:18px 0;color:var(--deep)}
+.doctorInfo>p{font-size:19px;line-height:1.75;color:var(--muted);margin-bottom:25px}
+.point{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.pointIcon{width:54px;height:54px;border-radius:16px;background:#eaf5f8;display:grid;place-items:center;font-size:23px;flex:none}
+.point b{display:block;font-size:18px;color:var(--deep)}
+.point span{color:var(--muted);font-size:14px}
 
-/* Mobile hamburger menu */
-.menuToggle{
-  display:none;border:0;background:transparent;color:#18314f;
-  width:52px;height:52px;border-radius:14px;cursor:pointer;
-  align-items:center;justify-content:center;padding:0;
+/* SERVICES */
+.services{background:var(--bg)}
+.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.cardIcon{width:50px;height:50px;border-radius:15px;background:#eaf6fa;display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.card h4{margin:0 0 7px;font-size:18px;color:var(--deep)}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+
+/* RESULTS */
+.resultsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.result{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.result img{display:block;width:100%;height:340px;object-fit:cover}
+.result div{padding:15px;font-weight:700}
+
+/* REVIEWS */
+.reviews{background:var(--deep);color:#fff}
+.reviews .sectionHead h3{color:#fff}
+.reviews .sectionHead p{color:#b9c8d6}
+.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:#113452;border:1px solid #27516d;border-radius:20px;padding:24px}
+.stars{color:#f0b93e;letter-spacing:2px}
+.review p{color:#d7e4ec;line-height:1.7;font-size:14px}
+.review a{color:#fff;font-weight:700}
+.allReviews{display:inline-block;margin-top:28px;padding:13px 20px;border:1px solid #7290a5;border-radius:12px;color:#fff;font-weight:700}
+
+/* CONTACT */
+.contact{background:#f3fafb}
+.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contactCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+.contactCard h4{font-size:23px;margin:0 0 18px;color:var(--deep)}
+.row{display:flex;gap:13px;margin:18px 0;color:var(--muted);line-height:1.55}
+.row strong{color:var(--deep)}
+.mapBtn{display:block;margin-top:20px;background:var(--navy);color:#fff;padding:15px;border-radius:13px;text-align:center;font-weight:800}
+.map{width:100%;height:320px;border:0;border-radius:16px}
+footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
+
+/* CLEAN FLOATING WHATSAPP */
+.whatsapp{
+ position:fixed;right:22px;bottom:22px;width:64px;height:64px;
+ border-radius:50%;background:var(--green);z-index:1000;
+ display:flex;align-items:center;justify-content:center;
+ box-shadow:0 12px 30px rgba(0,0,0,.28);
+ border:3px solid rgba(255,255,255,.22);
+ overflow:hidden;
 }
-.menuToggle span,.menuToggle span:before,.menuToggle span:after{
-  display:block;width:28px;height:3px;background:#18314f;border-radius:4px;
-  position:relative;transition:.25s;
+.whatsapp img{
+ width:34px!important;height:34px!important;
+ object-fit:contain!important;display:block!important;
+ max-width:none!important;border-radius:0!important;
 }
-.menuToggle span:before,.menuToggle span:after{content:"";position:absolute;left:0}
-.menuToggle span:before{top:-9px}.menuToggle span:after{top:9px}
-.mobileMenu{
-  display:none;position:fixed;top:0;right:-100%;width:min(330px,86vw);height:100vh;
-  background:#fff;z-index:200;padding:92px 28px 30px;box-shadow:-15px 0 40px #0003;
-  transition:right .3s ease;
-}
-.mobileMenu.open{right:0}
-.mobileMenu a{display:block;padding:16px 0;border-bottom:1px solid #e7edf3;color:#18314f;text-decoration:none;font-weight:700;font-size:17px}
-.menuOverlay{display:none;position:fixed;inset:0;background:#0008;z-index:190}
-.menuOverlay.open{display:block}
-.menuClose{position:absolute;top:22px;right:22px;border:0;background:#eef3f7;width:42px;height:42px;border-radius:50%;font-size:24px;cursor:pointer}
+.whatsapp:hover{transform:scale(1.05)}
+
+/* MOBILE MENU */
+.overlay{position:fixed;inset:0;background:rgba(4,18,33,.48);z-index:110;display:none}
+.mobileMenu{position:fixed;top:0;right:-100%;width:min(330px,88vw);height:100vh;background:#fff;z-index:120;padding:28px;transition:right .25s ease;box-shadow:-10px 0 35px rgba(0,0,0,.18)}
+.mobileMenu.open{right:0}.overlay.open{display:block}
+.close{border:0;background:#eef3f7;border-radius:12px;width:48px;height:48px;font-size:28px;color:#203650;float:right}
+.mobileMenu nav{clear:both;padding-top:70px;display:flex;flex-direction:column;gap:4px}
+.mobileMenu nav a{padding:15px 10px;border-bottom:1px solid #edf0f3;font-size:18px;font-weight:700}
+
+/* MOBILE: MATCH THE REFERENCE CLEANLY */
 @media(max-width:760px){
-  .menuToggle{display:flex!important}
-  .navlinks{display:none!important}
+ .container{width:100%}
+ .topbar .container{min-height:76px;padding:14px 28px;justify-content:center;text-align:center}
+ .topnote{display:none}
+ .address{font-size:15px;line-height:1.55;justify-content:center}
+ .header .container{min-height:164px;padding:0 28px;gap:16px}
+ .identity{gap:15px;flex:1}
+ .identity img{width:112px;height:112px}
+ .brand h1{font-size:28px;line-height:1.1}
+ .brand p{font-size:12px;line-height:1.75;letter-spacing:2.5px;margin-top:11px}
+ .navlinks{display:none}
+ .menuBtn{display:block;flex:none;width:92px;height:92px;border-radius:28px}
+ .menuBtn span,.menuBtn:before,.menuBtn:after{width:42px;height:5px;left:25px}
+ .menuBtn span{top:44px}.menuBtn:before{top:28px}.menuBtn:after{top:60px}
+
+ .hero{min-height:650px;background-position:58% center}
+ .heroContent{padding:78px 78px 82px;max-width:100%}
+ .kicker{font-size:14px;letter-spacing:4px;line-height:1.8;margin-bottom:25px}
+ .hero h2{font-size:76px;line-height:.98;letter-spacing:-3px}
+ .heroText{font-size:20px;line-height:1.55;margin:28px 0 30px;max-width:420px}
+ .primaryBtn{font-size:16px;padding:18px 23px}
+ section{padding:68px 28px}
+ .sectionHead h3{font-size:34px}
+ .doctorGrid,.contactGrid{grid-template-columns:1fr;gap:34px}
+ .photoPlaceholder{height:360px}
+ .doctorInfo h3{font-size:42px}
+ .serviceGrid,.resultsGrid,.reviewGrid{grid-template-columns:1fr}
+ .result img{height:300px}
+ .whatsapp{width:64px;height:64px;right:20px;bottom:20px}
+ .whatsapp img{width:32px!important;height:32px!important}
 }
 
-
-/* Mobile header menu fix */
-@media(max-width:760px){
-  nav{position:sticky!important;top:0!important;z-index:150!important}
-  .navin{position:relative!important}
-  .navcall{display:none!important}
-  .menuToggle{
-    display:flex!important;
-    position:static!important;
-    flex:0 0 52px!important;
-    margin-left:auto!important;
-    z-index:210!important;
-    background:#eef4f7!important;
-  }
-  .menuToggle span,.menuToggle span:before,.menuToggle span:after{
-    background:#18314f!important;
-  }
-  .mobileMenu{display:block!important;z-index:500!important}
-  .menuOverlay{z-index:490!important}
+/* Smaller Android phones */
+@media(max-width:480px){
+ .topbar .container{min-height:68px;padding:12px 22px}
+ .address{font-size:13px}
+ .header .container{min-height:128px;padding:0 26px}
+ .identity img{width:86px;height:86px}
+ .brand h1{font-size:23px}
+ .brand p{font-size:9px;letter-spacing:2px;line-height:1.7}
+ .menuBtn{width:72px;height:72px;border-radius:22px}
+ .menuBtn span,.menuBtn:before,.menuBtn:after{width:34px;height:4px;left:19px}
+ .menuBtn span{top:34px}.menuBtn:before{top:22px}.menuBtn:after{top:46px}
+ .hero{min-height:620px;background-position:62% center}
+ .heroContent{padding:72px 28px 80px}
+ .kicker{font-size:12px;letter-spacing:3px}
+ .hero h2{font-size:64px}
+ .heroText{font-size:18px}
+ .primaryBtn{font-size:15px;padding:16px 20px}
+ section{padding:60px 28px}
+ .whatsapp{width:62px;height:62px}
+ .whatsapp img{width:31px!important;height:31px!important}
 }
-
-
-/* Clean floating WhatsApp icon */
-.wa{
-  width:72px!important;
-  height:72px!important;
-  padding:0!important;
-  overflow:hidden!important;
-  border-radius:50%!important;
-  background:#25D366!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-}
-.wa img{
-  width:100%!important;
-  height:100%!important;
-  display:block!important;
-  object-fit:cover!important;
-  border-radius:50%!important;
-}
-@media(max-width:760px){
-  .wa{
-    width:68px!important;
-    height:68px!important;
-    right:20px!important;
-    bottom:20px!important;
-  }
-}
-
 </style>
 </head>
 <body>
-<div class="top"><div class="container">
-<span>📍 Opposite NRL Petrol Pump · Dhodar Ali Road · Nazira, Assam 785685</span>
-<span>Call or WhatsApp for appointments</span>
-</div></div>
 
-<nav><div class="container navin">
-<a class="logo" href="#"><img class="logoImg" src="assets/clinic-logo.png" alt="Clinic logo"><span class="brand"><strong>Dr. Abhilash’s Elite Dental Clinic</strong><span>Specialized in Implants &amp; Endodontics</span></span></a>
-<div class="navlinks"><a href="#">Home</a><a href="#doctor">Doctor</a><a href="#services">Services</a><a href="#results">Results</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
-<a class="navcall" href="tel:+919742818628">☎ +91 97428 18628</a>
-<button class="menuToggle" aria-label="Open menu" onclick="toggleMenu()"><span></span></button>
-</div></nav>
-
-<section class="hero"><div class="container heroInner">
-<div class="eyebrow">Specialized in Implants &amp; Endodontics</div>
-<h1>Healthy Smiles.<br><span>Expert Care.</span></h1>
-<p class="lead">Modern dental care with a personal touch.</p>
-<div><a class="btn primary" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">▣ Book an Appointment</a><a class="btn outline" href="#doctor">Meet the Doctor</a></div>
-</div></section>
-
-<section class="section alt" id="doctor"><div class="container">
-<div class="heading"><div class="tag">Meet your dentist</div><h2>Meet the Doctor</h2><p>Dedicated to providing comfortable, modern and personalised dental care.</p></div>
-<div class="doctorGrid">
-<div class="photoPlaceholder">
-<div class="photoIcon">▧</div><b>DOCTOR PHOTO</b><span>Add professional doctor image here later</span>
+<div class="topbar">
+ <div class="container">
+  <div class="address">📍 Opposite NRL Petrol Pump · Dhodar Ali Road · Nazira, Assam 785685</div>
+  <div class="topnote">Call or WhatsApp for appointments</div>
+ </div>
 </div>
-<div class="doctorText">
-<span class="role">BDS | Specialized in Implants &amp; Endodontics</span>
-<h2>Dr. Abhilash</h2>
-<p>Committed to helping patients achieve healthier, confident smiles with personalised and comfortable dental care.</p>
-<div class="points">
-<div class="point"><div class="pointIcon">🦷</div><div><b>Patient First</b><span>Your comfort and smile are always the priority.</span></div></div>
-<div class="point"><div class="pointIcon">✦</div><div><b>Modern Care</b><span>Advanced treatment with a gentle approach.</span></div></div>
-<div class="point"><div class="pointIcon">♡</div><div><b>Personalised Approach</b><span>Every patient receives care tailored to their needs.</span></div></div>
-</div>
-<div class="doctorExtras">
-<div class="extra"><b>Qualifications</b><span>Add qualifications here later</span></div>
-<div class="extra"><b>Experience</b><span>Add experience details later</span></div>
-</div>
-</div>
-</div></div></section>
 
-<section class="section" id="services"><div class="container">
-<div class="heading"><div class="tag">Our services</div><h2>Complete dental care.</h2><p>Everything you need for a healthier, more confident smile.</p></div>
-<div class="services">
-<div class="service"><div class="icon">🦷</div><h3>Dental Implants</h3><p>Restore missing teeth and confidence.</p></div>
-<div class="service"><div class="icon">◉</div><h3>Root Canal Treatment</h3><p>Focused care to save natural teeth.</p></div>
-<div class="service"><div class="icon">😁</div><h3>Braces & Orthodontics</h3><p>Better alignment and healthier smiles.</p></div>
-<div class="service"><div class="icon">✨</div><h3>Teeth Whitening</h3><p>Brighten your smile safely.</p></div>
-<div class="service"><div class="icon">◆</div><h3>Crowns & Capping</h3><p>Restore strength and natural function.</p></div>
-<div class="service"><div class="icon">♡</div><h3>Preventive Dentistry</h3><p>Routine care for long-term oral health.</p></div>
-</div></div></section>
+<header class="header">
+ <div class="container">
+  <a href="#home" class="identity">
+   <img src="assets/clinic-logo.png" alt="Dr. Abhilash's Elite Dental Clinic logo">
+   <div class="brand">
+    <h1>Dr. Abhilash’s Elite<br>Dental Clinic</h1>
+    <p>Specialized in Implants &amp;<br>Endodontics</p>
+   </div>
+  </a>
+  <div class="navlinks">
+   <a href="#home">Home</a><a href="#doctor">Doctor</a><a href="#services">Services</a>
+   <a href="#results">Results</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menuBtn" aria-label="Open menu" onclick="toggleMenu()"><span></span></button>
+ </div>
+</header>
 
-<section class="section results" id="results"><div class="container">
-<div class="heading"><div class="tag">Patient results</div><h2>Real smiles. Real results.</h2><p>A selection of treatment results from the clinic.</p></div>
-<div class="resultsGrid">
-<div class="resultCard"><img src="assets/patient-result-1.jpg" alt="Treatment result"><div class="resultText"><b>Smile correction</b><span>Before and after result</span></div></div>
-<div class="resultCard"><img src="assets/patient-result-2.jpg" alt="Treatment result"><div class="resultText"><b>Dental treatment</b><span>Clinical treatment progress</span></div></div>
-<div class="resultCard"><img src="assets/patient-result-3.jpg" alt="Treatment result"><div class="resultText"><b>Smile rehabilitation</b><span>Before and after result</span></div></div>
-</div></div></section>
+<main id="home">
+<section class="hero">
+ <div class="container heroContent">
+  <div class="kicker">Specialized in Implants &amp; Endodontics</div>
+  <h2>Healthy<br>Smiles.<br><span>Expert Care.</span></h2>
+  <p class="heroText">Modern dental care with a personal touch.</p>
+  <a class="primaryBtn" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">▣ Book an Appointment</a>
+ </div>
+</section>
 
-<section class="section reviewSection" id="reviews"><div class="container">
-<div class="heading"><div class="tag">Google reviews</div><h2>What our patients say.</h2><p>Real feedback from patients who visited the clinic.</p></div>
-<div class="reviewGrid">
-<div class="review"><div class="stars">★★★★★</div><p>“I had a wonderful experience with Dr Abhilash Chetia. I had a dental implant, root canal and cavity fillings done at the clinic.”</p><b>— Suchila Sharma</b></div>
-<div class="review"><div class="stars">★★★★★</div><p>“My regular doctor visits were smooth. The recovery after my scheduled procedure was speedy and booking was easy.”</p><b>— Kongkona Tamuly</b></div>
-<div class="review"><div class="stars">★★★★★</div><p>“Excellent treatment with gentle care in a clean and hygienic environment. Quick service and attentive care.”</p><b>— Google Review</b></div>
-</div>
-<div class="reviewAction"><a target="_blank" href="https://www.google.com/search?q=Dr+Abhilash+Elite+Dental+Clinic+Sivasagar">View All Google Reviews →</a></div>
-</div></section>
+<section class="doctor" id="doctor">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Meet your dentist</div><h3>Meet the Doctor</h3><p>Dedicated to comfortable, modern and personalised dental care.</p></div>
+  <div class="doctorGrid">
+   <div class="photoPlaceholder"><div><strong>DOCTOR PHOTO</strong><small>Add professional doctor image here later</small></div></div>
+   <div class="doctorInfo">
+    <span class="role">BDS | Specialized in Implants &amp; Endodontics</span>
+    <h3>Dr. Abhilash</h3>
+    <p>Committed to helping patients achieve healthier, confident smiles with personalised and comfortable dental care.</p>
+    <div class="point"><div class="pointIcon">🦷</div><div><b>Patient First</b><span>Your comfort and smile are always the priority.</span></div></div>
+    <div class="point"><div class="pointIcon">✦</div><div><b>Modern Care</b><span>Advanced treatment with a gentle approach.</span></div></div>
+    <div class="point"><div class="pointIcon">♡</div><div><b>Personalised Approach</b><span>Every patient receives care tailored to their needs.</span></div></div>
+   </div>
+  </div>
+ </div>
+</section>
 
-<section class="section" id="gallery"><div class="container">
-<div class="heading"><div class="tag">Our clinic</div><h2>A look inside our clinic.</h2><p>Modern facilities designed for comfortable dental care.</p></div>
-<div class="gallery">
-<img src="assets/clinic-treatment-room.jpg" alt="Dental treatment room">
-<img src="assets/clinic-consultation-area.jpg" alt="Clinic consultation area">
-<img src="assets/implant-xray.jpg" alt="Dental implant X-ray">
-<img src="assets/hero-treatment.jpg" alt="Dental treatment">
-<img src="assets/patient-result-1.jpg" alt="Patient result">
-</div></div></section>
+<section class="services" id="services">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Our services</div><h3>Complete dental care.</h3><p>Everything you need for a healthier, more confident smile.</p></div>
+  <div class="serviceGrid">
+   <div class="card"><div class="cardIcon">🦷</div><h4>Dental Implants</h4><p>Restore missing teeth and confidence.</p></div>
+   <div class="card"><div class="cardIcon">◉</div><h4>Root Canal Treatment</h4><p>Focused care to save natural teeth.</p></div>
+   <div class="card"><div class="cardIcon">😁</div><h4>Braces &amp; Orthodontics</h4><p>Better alignment and healthier smiles.</p></div>
+   <div class="card"><div class="cardIcon">✨</div><h4>Teeth Whitening</h4><p>Brighten your smile safely.</p></div>
+   <div class="card"><div class="cardIcon">◆</div><h4>Crowns &amp; Capping</h4><p>Restore strength and natural function.</p></div>
+   <div class="card"><div class="cardIcon">♡</div><h4>Preventive Dentistry</h4><p>Routine care for long-term oral health.</p></div>
+  </div>
+ </div>
+</section>
 
-<section class="section contact" id="contact"><div class="container">
-<div class="heading"><div class="tag">Contact us</div><h2>Let's take care of your smile.</h2><p>Call or WhatsApp us to book an appointment.</p></div>
-<div class="contactGrid">
-<div class="contactCard">
-<h3>Clinic information</h3>
-<div class="row"><div class="ci">📍</div><div><b>Address</b><br>Opposite NRL Petrol Pump, Dhodar Ali Road, Nazira, Sivasagar, Assam 785685</div></div>
-<div class="row"><div class="ci">☎</div><div><b>Phone / WhatsApp</b><br><a href="tel:+919742818628">+91 97428 18628</a></div></div>
-<div class="row"><div class="ci">🕘</div><div><b>Hours</b><br>9:00 AM – 6:30 PM</div></div>
-<a class="mapLink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">📍 Get Directions</a>
-</div>
-<div class="contactCard">
-<h3>Find us easily</h3>
-<p style="color:var(--muted)">Visit Dr. Abhilash’s Elite Dental Clinic in Nazira.</p>
-<div class="mapPreview">
-<iframe src="https://www.google.com/maps?q=Dr.+Abhilash%27s+Elite+Dental+Clinic,+Nazira,+Assam&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dr. Abhilash’s Elite Dental Clinic location"></iframe>
-</div>
-<a class="mapOpen" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">🗺️ Open in Google Maps</a>
-<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">💬 WhatsApp Us</a>
-</div>
-</div></div></section>
+<section id="results">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Patient results</div><h3>Real smiles. Real results.</h3><p>A selection of treatment results from the clinic.</p></div>
+  <div class="resultsGrid">
+   <div class="result"><img src="assets/patient-result-1.jpg" alt="Treatment result"><div>Smile correction</div></div>
+   <div class="result"><img src="assets/patient-result-2.jpg" alt="Treatment result"><div>Dental treatment</div></div>
+   <div class="result"><img src="assets/patient-result-3.jpg" alt="Treatment result"><div>Smile rehabilitation</div></div>
+  </div>
+ </div>
+</section>
 
-<footer><div class="container foot"><div><strong>Dr. Abhilash’s Elite Dental Clinic</strong><br>Nazira, Assam · Advanced Dental Care</div><div>© 2026 · All rights reserved</div></div></footer>
-<a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp"><img src="assets/whatsapp-icon.png" alt="WhatsApp"></a>
+<section class="reviews" id="reviews">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Google reviews</div><h3>What our patients say.</h3><p>Real feedback from patients who visited the clinic.</p></div>
+  <div class="reviewGrid">
+   <div class="review"><div class="stars">★★★★★</div><p>“I had a wonderful experience with Dr Abhilash Chetia. I had a dental implant, root canal and cavity fillings done at the clinic.”</p><strong>— Suchila Sharma</strong></div>
+   <div class="review"><div class="stars">★★★★★</div><p>“My regular doctor visits were smooth. The recovery after my scheduled procedure was speedy and booking was easy.”</p><strong>— Kongkona Tamuly</strong></div>
+   <div class="review"><div class="stars">★★★★★</div><p>“Excellent treatment with gentle care in a clean and hygienic environment. Quick service and attentive care.”</p><strong>— Google Review</strong></div>
+  </div>
+  <div style="text-align:center"><a class="allReviews" target="_blank" href="https://www.google.com/search?q=Dr+Abhilash+Elite+Dental+Clinic+Sivasagar">View All Google Reviews →</a></div>
+ </div>
+</section>
 
-<div class="menuOverlay" id="menuOverlay" onclick="toggleMenu()"></div>
-<div class="mobileMenu" id="mobileMenu">
-  <button class="menuClose" aria-label="Close menu" onclick="toggleMenu()">×</button>
+<section class="contact" id="contact">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Contact us</div><h3>Let's take care of your smile.</h3><p>Call or WhatsApp us to book an appointment.</p></div>
+  <div class="contactGrid">
+   <div class="contactCard">
+    <h4>Clinic information</h4>
+    <div class="row"><div>📍</div><div><strong>Address</strong><br>Opposite NRL Petrol Pump, Dhodar Ali Road, Nazira, Sivasagar, Assam 785685</div></div>
+    <div class="row"><div>☎</div><div><strong>Phone / WhatsApp</strong><br><a href="tel:+919742818628">+91 97428 18628</a></div></div>
+    <a class="mapBtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">📍 Open in Google Maps</a>
+   </div>
+   <div class="contactCard">
+    <h4>Find us easily</h4>
+    <iframe class="map" src="https://www.google.com/maps?q=Dr.+Abhilash%27s+Elite+Dental+Clinic,+Nazira,+Assam&output=embed" loading="lazy" title="Clinic map"></iframe>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Dr. Abhilash’s Elite Dental Clinic · Nazira, Assam</div></footer>
+
+<a class="whatsapp" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." aria-label="Chat on WhatsApp">
+ <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<aside class="mobileMenu" id="mobileMenu">
+ <button class="close" onclick="toggleMenu()" aria-label="Close menu">×</button>
+ <nav>
   <a href="#home" onclick="toggleMenu()">Home</a>
-  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#doctor" onclick="toggleMenu()">Doctor</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#treatments" onclick="toggleMenu()">Treatments</a>
-  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#results" onclick="toggleMenu()">Results</a>
   <a href="#reviews" onclick="toggleMenu()">Reviews</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
+ </nav>
+</aside>
+
 <script>
 function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('open');
-  document.getElementById('menuOverlay').classList.toggle('open');
+ document.getElementById('mobileMenu').classList.toggle('open');
+ document.getElementById('overlay').classList.toggle('open');
 }
 </script>
-
-</body></html>
+</body>
+</html>
