@@ -134,11 +134,41 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
   .navlinks{display:none!important}
 }
 
+
+/* Mobile header menu fix */
+@media(max-width:760px){
+  nav{position:sticky!important;top:0!important;z-index:150!important}
+  .navin{position:relative!important}
+  .navcall{display:none!important}
+  .menuToggle{
+    display:flex!important;
+    position:static!important;
+    flex:0 0 52px!important;
+    margin-left:auto!important;
+    z-index:210!important;
+    background:#eef4f7!important;
+  }
+  .menuToggle span,.menuToggle span:before,.menuToggle span:after{
+    background:#18314f!important;
+  }
+  .mobileMenu{display:block!important;z-index:500!important}
+  .menuOverlay{z-index:490!important}
+}
+
+
+/* Force real WhatsApp logo in floating button */
+.wa img.wa-logo,.wa-logo{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  border-radius:50%!important;
+}
+.wa{padding:0!important;overflow:hidden!important;background:#25D366!important;}
+
 </style>
 </head>
 <body>
-<button class="menuToggle" aria-label="Open menu" onclick="toggleMenu()" style="position:absolute;top:20px;right:18px;z-index:100"><span></span></button>
-
 <div class="top"><div class="container">
 <span>📍 Opposite NRL Petrol Pump · Dhodar Ali Road · Nazira, Assam 785685</span>
 <span>Call or WhatsApp for appointments</span>
@@ -148,13 +178,14 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 <a class="logo" href="#"><img class="logoImg" src="assets/clinic-logo.png" alt="Clinic logo"><span class="brand"><strong>Dr. Abhilash’s Elite Dental Clinic</strong><span>Specialized in Implants &amp; Endodontics</span></span></a>
 <div class="navlinks"><a href="#">Home</a><a href="#doctor">Doctor</a><a href="#services">Services</a><a href="#results">Results</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
 <a class="navcall" href="tel:+919742818628">☎ +91 97428 18628</a>
+<button class="menuToggle" aria-label="Open menu" onclick="toggleMenu()"><span></span></button>
 </div></nav>
 
 <section class="hero"><div class="container heroInner">
 <div class="eyebrow">Specialized in Implants &amp; Endodontics</div>
 <h1>Healthy Smiles.<br><span>Expert Care.</span></h1>
 <p class="lead">Modern dental care with a personal touch.</p>
-<div><a class="btn primary" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">▣ Book an Appointment</a><a class="btn outline" href="#doctor">Meet the Doctor</a></div>
+<div><a class="btn primary" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment."><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a><a class="btn outline" href="#doctor">Meet the Doctor</a></div>
 </div></section>
 
 <section class="section alt" id="doctor"><div class="container">
@@ -235,12 +266,12 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 <iframe src="https://www.google.com/maps?q=Dr.+Abhilash%27s+Elite+Dental+Clinic,+Nazira,+Assam&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dr. Abhilash’s Elite Dental Clinic location"></iframe>
 </div>
 <a class="mapOpen" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">🗺️ Open in Google Maps</a>
-<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">💬 WhatsApp Us</a>
+<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment."><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a>
 </div>
 </div></div></section>
 
 <footer><div class="container foot"><div><strong>Dr. Abhilash’s Elite Dental Clinic</strong><br>Nazira, Assam · Advanced Dental Care</div><div>© 2026 · All rights reserved</div></div></footer>
-<a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp">◉</a>
+<a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp"><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a>
 
 <div class="menuOverlay" id="menuOverlay" onclick="toggleMenu()"></div>
 <div class="mobileMenu" id="mobileMenu">
