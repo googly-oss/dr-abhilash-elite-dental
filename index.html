@@ -106,9 +106,38 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
   .serviceCard {padding:22px 12px !important;}
 }
 
+
+/* Mobile hamburger menu */
+.menuToggle{
+  display:none;border:0;background:transparent;color:#18314f;
+  width:52px;height:52px;border-radius:14px;cursor:pointer;
+  align-items:center;justify-content:center;padding:0;
+}
+.menuToggle span,.menuToggle span:before,.menuToggle span:after{
+  display:block;width:28px;height:3px;background:#18314f;border-radius:4px;
+  position:relative;transition:.25s;
+}
+.menuToggle span:before,.menuToggle span:after{content:"";position:absolute;left:0}
+.menuToggle span:before{top:-9px}.menuToggle span:after{top:9px}
+.mobileMenu{
+  display:none;position:fixed;top:0;right:-100%;width:min(330px,86vw);height:100vh;
+  background:#fff;z-index:200;padding:92px 28px 30px;box-shadow:-15px 0 40px #0003;
+  transition:right .3s ease;
+}
+.mobileMenu.open{right:0}
+.mobileMenu a{display:block;padding:16px 0;border-bottom:1px solid #e7edf3;color:#18314f;text-decoration:none;font-weight:700;font-size:17px}
+.menuOverlay{display:none;position:fixed;inset:0;background:#0008;z-index:190}
+.menuOverlay.open{display:block}
+.menuClose{position:absolute;top:22px;right:22px;border:0;background:#eef3f7;width:42px;height:42px;border-radius:50%;font-size:24px;cursor:pointer}
+@media(max-width:760px){
+  .menuToggle{display:flex!important}
+  .navlinks{display:none!important}
+}
+
 </style>
 </head>
 <body>
+<button class="menuToggle" aria-label="Open menu" onclick="toggleMenu()" style="position:absolute;top:20px;right:18px;z-index:100"><span></span></button>
 
 <div class="top"><div class="container">
 <span>📍 Opposite NRL Petrol Pump · Dhodar Ali Road · Nazira, Assam 785685</span>
@@ -212,4 +241,23 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 
 <footer><div class="container foot"><div><strong>Dr. Abhilash’s Elite Dental Clinic</strong><br>Nazira, Assam · Advanced Dental Care</div><div>© 2026 · All rights reserved</div></div></footer>
 <a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp">◉</a>
+
+<div class="menuOverlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<div class="mobileMenu" id="mobileMenu">
+  <button class="menuClose" aria-label="Close menu" onclick="toggleMenu()">×</button>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#treatments" onclick="toggleMenu()">Treatments</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+<script>
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('menuOverlay').classList.toggle('open');
+}
+</script>
+
 </body></html>
