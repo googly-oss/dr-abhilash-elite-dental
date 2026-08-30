@@ -67,6 +67,10 @@ background:linear-gradient(90deg,rgba(5,27,54,.96) 0%,rgba(7,31,59,.88) 46%,rgba
 .contact{background:linear-gradient(135deg,#e7f8f6,#f9ffff)}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contactCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
 .contactCard h3{margin-top:0;color:var(--deep)}.row{display:flex;gap:13px;margin:18px 0;color:var(--muted);font-size:14px}.row b{color:var(--deep)}.ci{width:42px;height:42px;min-width:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center}
 .mapLink{display:block;margin-top:15px;background:var(--navy);color:white;padding:14px 18px;border-radius:12px;text-align:center;font-weight:800}
+.mapPreview{margin-top:20px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#eef4f6}
+.mapPreview iframe{width:100%;height:320px;border:0;display:block}
+.mapOpen{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;background:#fff;color:var(--navy);border:1px solid #cddbe3;padding:13px 18px;border-radius:12px;font-weight:850;width:100%}
+.mapOpen:hover{background:#f3f8fa}
 footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}.foot strong{color:#fff}
 .wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 14px 35px #0003;z-index:60}
 
@@ -171,9 +175,13 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 <a class="mapLink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">📍 Get Directions</a>
 </div>
 <div class="contactCard">
-<h3>Book an appointment</h3>
-<p style="color:var(--muted)">Tell us your concern and preferred day. We will help you with your appointment.</p>
-<a class="btn primary" style="width:100%;margin-top:16px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">💬 WhatsApp Us</a>
+<h3>Find us easily</h3>
+<p style="color:var(--muted)">Visit Dr. Abhilash's Elite Dental Clinic in Nazira.</p>
+<div class="mapPreview">
+<iframe src="https://www.google.com/maps?q=Dr.+Abhilash%27s+Elite+Dental+Clinic,+Nazira,+Assam&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dr. Abhilash's Elite Dental Clinic location"></iframe>
+</div>
+<a class="mapOpen" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">🗺️ Open in Google Maps</a>
+<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">💬 WhatsApp Us</a>
 </div>
 </div></div></section>
 
