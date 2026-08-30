@@ -156,15 +156,33 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 }
 
 
-/* Force real WhatsApp logo in floating button */
-.wa img.wa-logo,.wa-logo{
+/* Clean floating WhatsApp icon */
+.wa{
+  width:72px!important;
+  height:72px!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:50%!important;
+  background:#25D366!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.wa img{
   width:100%!important;
   height:100%!important;
   display:block!important;
   object-fit:cover!important;
   border-radius:50%!important;
 }
-.wa{padding:0!important;overflow:hidden!important;background:#25D366!important;}
+@media(max-width:760px){
+  .wa{
+    width:68px!important;
+    height:68px!important;
+    right:20px!important;
+    bottom:20px!important;
+  }
+}
 
 </style>
 </head>
@@ -185,7 +203,7 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 <div class="eyebrow">Specialized in Implants &amp; Endodontics</div>
 <h1>Healthy Smiles.<br><span>Expert Care.</span></h1>
 <p class="lead">Modern dental care with a personal touch.</p>
-<div><a class="btn primary" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment."><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a><a class="btn outline" href="#doctor">Meet the Doctor</a></div>
+<div><a class="btn primary" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">▣ Book an Appointment</a><a class="btn outline" href="#doctor">Meet the Doctor</a></div>
 </div></section>
 
 <section class="section alt" id="doctor"><div class="container">
@@ -266,12 +284,12 @@ footer{background:#041f2a;color:#aac3ca;padding:30px 0}.foot{display:flex;justif
 <iframe src="https://www.google.com/maps?q=Dr.+Abhilash%27s+Elite+Dental+Clinic,+Nazira,+Assam&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dr. Abhilash’s Elite Dental Clinic location"></iframe>
 </div>
 <a class="mapOpen" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dr+Abhilash%27s+Elite+Dental+Clinic+Nazira+Assam">🗺️ Open in Google Maps</a>
-<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment."><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a>
+<a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment.">💬 WhatsApp Us</a>
 </div>
 </div></div></section>
 
 <footer><div class="container foot"><div><strong>Dr. Abhilash’s Elite Dental Clinic</strong><br>Nazira, Assam · Advanced Dental Care</div><div>© 2026 · All rights reserved</div></div></footer>
-<a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp"><img src="assets/whatsapp-logo.png" alt="WhatsApp" class="wa-logo"></a>
+<a class="wa" href="https://wa.me/919742818628?text=Hello%20Dr.%20Abhilash%27s%20Elite%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." aria-label="WhatsApp"><img src="assets/whatsapp-icon.png" alt="WhatsApp"></a>
 
 <div class="menuOverlay" id="menuOverlay" onclick="toggleMenu()"></div>
 <div class="mobileMenu" id="mobileMenu">
