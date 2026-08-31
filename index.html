@@ -88,6 +88,16 @@ section{padding:84px 0}
 .doctorPhoto{height:480px;border-radius:30px;overflow:hidden;background:#eef4f7}
 .doctorPhoto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
+
+/* Desktop doctor profile: show the full professional portrait cleanly without affecting mobile */
+@media (min-width:769px){
+ .doctorGrid{grid-template-columns:minmax(430px,.92fr) minmax(500px,1.08fr);gap:70px}
+ .doctorPhoto{height:600px;padding:16px;background:linear-gradient(145deg,#eef5f7,#dfeaf0);box-shadow:0 18px 45px rgba(20,53,80,.10)}
+ .doctorPhoto img{object-fit:contain;object-position:center center;border-radius:20px;background:#fff}
+ .doctorInfo h3{font-size:52px}
+ .doctorInfo>p{font-size:17px;line-height:1.72;margin:14px 0}
+}
+
 /* SERVICES - CLICK TO EXPAND */
 .services{background:var(--bg)}
 .serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -275,15 +285,16 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  <div class="container">
   <div class="sectionHead"><div class="tag">Meet your dentist</div><h3>Meet the Doctor</h3><p>Dedicated to comfortable, modern and personalised dental care.</p></div>
   <div class="doctorGrid">
-   <div class="doctorPhoto"><img src="assets/dr-abhilash.jpg" alt="Dr. Abhilash at Dr. Abhilash's Elite Dental Clinic"></div>
+   <div class="doctorPhoto"><img src="assets/dr-abhilash.jpg" alt="Dr. Abhilash Chetia at Dr. Abhilash's Elite Dental Clinic"></div>
    <div class="doctorInfo">
     <span class="role">BDS | Specialized in Implants &amp; Endodontics</span>
-    <h3>Dr. Abhilash</h3>
+    <h3>Dr. Abhilash Chetia</h3>
     <div class="experience">12+ Years of Experience</div>
-    <p>Committed to helping patients achieve healthier, confident smiles with personalised and comfortable dental care.</p>
-    <div class="point"><div class="pointIcon">🦷</div><div><b>Patient First</b><span>Your comfort and smile are always the priority.</span></div></div>
-    <div class="point"><div class="pointIcon">✦</div><div><b>Modern Care</b><span>Advanced treatment with a gentle approach.</span></div></div>
-    <div class="point"><div class="pointIcon">♡</div><div><b>Personalised Approach</b><span>Every patient receives care tailored to their needs.</span></div></div>
+    <p>Dr. Abhilash Chetia is a dedicated dental professional committed to providing high-quality, patient-focused dental care. With over 12 years of experience, he combines clinical expertise with a gentle and personalised approach to help patients achieve healthy, confident smiles.</p>
+    <p>Specializing in dental implants and endodontics, Dr. Abhilash Chetia focuses on understanding each patient's individual needs and providing comfortable, effective treatment solutions. From routine dental care to advanced procedures, every treatment is planned with precision, comfort and long-term oral health in mind.</p>
+    <div class="point"><div class="pointIcon">🦷</div><div><b>Patient First</b><span>Your comfort and well-being are always the priority.</span></div></div>
+    <div class="point"><div class="pointIcon">✦</div><div><b>Modern Care</b><span>Advanced techniques and modern treatment approaches.</span></div></div>
+    <div class="point"><div class="pointIcon">♡</div><div><b>Personalised Approach</b><span>Treatment plans tailored to your individual dental needs.</span></div></div>
    </div>
   </div>
  </div>
@@ -398,10 +409,10 @@ function toggleMenu(){
 const serviceData={
  implants:{title:'Dental Implants',tag:'Replace missing teeth',description:'Dental implants are a long-lasting option for replacing missing teeth and restoring the comfort, function and confidence of your smile.',points:['Natural-looking replacement','Stable and long-lasting','Improved chewing comfort','Personalised treatment planning'],photos:['assets/implant-xray.jpg','assets/service-smile-result.jpg']},
  rootcanal:{title:'Root Canal Treatment',tag:'Endodontic care',description:'Root canal treatment focuses on saving an infected or damaged natural tooth while relieving pain and protecting your natural smile.',points:['Helps save natural teeth','Focused infection control','Modern treatment approach','Comfort-focused care'],photos:['assets/service-treatment.jpg']},
- braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:['assets/service-braces-orthodontics.jpg']},
+ braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:['assets/service-braces-real-result.jpg','assets/service-braces-orthodontics.jpg']},
  whitening:{title:'Teeth Whitening',tag:'Brighten your smile',description:'Professional teeth whitening can help improve the brightness of your smile with guidance based on your dental condition.',points:['Brighter-looking smile','Professional guidance','Personalised approach','Smile-focused results'],photos:['assets/service-cleaning-result.jpg']},
  crowns:{title:'Crowns & Capping',tag:'Restore strength',description:'Crowns and caps help restore the strength, shape and function of damaged teeth while supporting a natural-looking smile.',points:['Restores tooth function','Protects weakened teeth','Natural appearance','Treatment tailored to you'],photos:['assets/service-crowns-before-after.jpg','assets/service-crown-restoration.jpg']},
- preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums and can identify dental concerns early.',points:['Routine dental care','Early problem detection','Oral hygiene guidance','Long-term smile care'],photos:[]}
+ preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums, reduce the risk of common dental problems and identify concerns early.',points:['Routine dental check-ups','Professional cleaning','Early problem detection','Oral hygiene guidance'],photos:['assets/service-cleaning-result.jpg','assets/service-preventive-care.jpg']}
 };
 const details=document.getElementById('serviceDetails');
 const cards=document.querySelectorAll('.serviceCard');
