@@ -78,13 +78,30 @@ section{padding:84px 0}
 .point b{display:block;font-size:18px;color:var(--deep)}
 .point span{color:var(--muted);font-size:14px}
 
-/* SERVICES */
+/* SERVICES - CLICK TO EXPAND */
 .services{background:var(--bg)}
 .serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.serviceCard{appearance:none;text-align:left;width:100%;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;cursor:pointer;transition:.22s ease;color:inherit;font-family:inherit}
+.serviceCard:hover,.serviceCard.active{transform:translateY(-3px);border-color:#76c4dc;box-shadow:0 12px 30px rgba(20,53,80,.09)}
+.serviceCard.active{background:#f5fbfd}
 .cardIcon{width:50px;height:50px;border-radius:15px;background:#eaf6fa;display:grid;place-items:center;font-size:22px;margin-bottom:16px}
-.card h4{margin:0 0 7px;font-size:18px;color:var(--deep)}
-.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.serviceCard h4{margin:0 0 7px;font-size:18px;color:var(--deep)}
+.serviceCard p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.serviceHint{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:800;color:#3298b8}
+.serviceHint span{font-size:20px;line-height:1}
+.serviceDetails{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:none}
+.serviceDetails.open{display:block;animation:serviceOpen .28s ease}
+@keyframes serviceOpen{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.serviceDetailInner{padding:34px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+.serviceDetailTag{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#3298b8;font-weight:800;margin-bottom:10px}
+.serviceDetailInner h4{font-size:34px;margin:0 0 14px;color:var(--deep)}
+.serviceDetailInner p{margin:0;color:var(--muted);font-size:16px;line-height:1.75}
+.servicePoints{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.servicePoint{background:#f3f8fa;border-radius:12px;padding:11px 13px;font-size:13px;font-weight:700;color:#365166}
+.servicePhotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.servicePhotos img{width:100%;height:180px;object-fit:cover;border-radius:16px;border:1px solid var(--line);background:#eef4f7}
+.servicePhotos img.wide{grid-column:1/-1;height:220px}
+.serviceCTA{margin-top:4px}
 
 /* RESULTS */
 .resultsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -169,6 +186,12 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  .photoPlaceholder{height:360px}
  .doctorInfo h3{font-size:42px}
  .serviceGrid,.resultsGrid,.reviewGrid{grid-template-columns:1fr}
+ .serviceCard{padding:22px}
+ .serviceDetailInner{grid-template-columns:1fr;padding:24px}
+ .serviceDetailInner h4{font-size:30px}
+ .servicePhotos img{height:160px}
+ .servicePhotos img.wide{height:200px}
+ .servicePoints{grid-template-columns:1fr}
  .result img{height:300px}
 
  /* Premium floating WhatsApp button */
@@ -258,12 +281,26 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  <div class="container">
   <div class="sectionHead"><div class="tag">Our services</div><h3>Complete dental care.</h3><p>Everything you need for a healthier, more confident smile.</p></div>
   <div class="serviceGrid">
-   <div class="card"><div class="cardIcon">🦷</div><h4>Dental Implants</h4><p>Restore missing teeth and confidence.</p></div>
-   <div class="card"><div class="cardIcon">◉</div><h4>Root Canal Treatment</h4><p>Focused care to save natural teeth.</p></div>
-   <div class="card"><div class="cardIcon">😁</div><h4>Braces &amp; Orthodontics</h4><p>Better alignment and healthier smiles.</p></div>
-   <div class="card"><div class="cardIcon">✨</div><h4>Teeth Whitening</h4><p>Brighten your smile safely.</p></div>
-   <div class="card"><div class="cardIcon">◆</div><h4>Crowns &amp; Capping</h4><p>Restore strength and natural function.</p></div>
-   <div class="card"><div class="cardIcon">♡</div><h4>Preventive Dentistry</h4><p>Routine care for long-term oral health.</p></div>
+   <button class="serviceCard" type="button" data-service="implants"><div class="cardIcon">🦷</div><h4>Dental Implants</h4><p>Restore missing teeth and confidence.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="rootcanal"><div class="cardIcon">◉</div><h4>Root Canal Treatment</h4><p>Focused care to save natural teeth.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="braces"><div class="cardIcon">😁</div><h4>Braces &amp; Orthodontics</h4><p>Better alignment and healthier smiles.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="whitening"><div class="cardIcon">✨</div><h4>Teeth Whitening</h4><p>Brighten your smile safely.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="crowns"><div class="cardIcon">◆</div><h4>Crowns &amp; Capping</h4><p>Restore strength and natural function.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="preventive"><div class="cardIcon">♡</div><h4>Preventive Dentistry</h4><p>Routine care for long-term oral health.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+  </div>
+
+  <!-- Opens when a service is clicked. Existing Patient Results below remain unchanged. -->
+  <div class="serviceDetails" id="serviceDetails" aria-live="polite">
+   <div class="serviceDetailInner">
+    <div class="serviceCopy">
+     <div class="serviceDetailTag" id="detailTag">Our treatment</div>
+     <h4 id="detailTitle">Dental Implants</h4>
+     <p id="detailDescription"></p>
+     <div class="servicePoints" id="detailPoints"></div>
+     <a class="primaryBtn serviceCTA" id="detailBook" href="#contact">Book an Appointment</a>
+    </div>
+    <div class="servicePhotos" id="detailPhotos"></div>
+   </div>
   </div>
  </div>
 </section>
@@ -334,6 +371,32 @@ function toggleMenu(){
  document.getElementById('mobileMenu').classList.toggle('open');
  document.getElementById('overlay').classList.toggle('open');
 }
+
+// Service details: photos can reuse the existing Patient Results images without changing that section.
+const serviceData={
+ implants:{title:'Dental Implants',tag:'Replace missing teeth',description:'Dental implants are a long-lasting option for replacing missing teeth and restoring the comfort, function and confidence of your smile.',points:['Natural-looking replacement','Stable and long-lasting','Improved chewing comfort','Personalised treatment planning'],photos:['assets/implant-xray.jpg','assets/patient-result-1.jpg','assets/patient-result-3.jpg']},
+ rootcanal:{title:'Root Canal Treatment',tag:'Endodontic care',description:'Root canal treatment focuses on saving an infected or damaged natural tooth while relieving pain and protecting your natural smile.',points:['Helps save natural teeth','Focused infection control','Modern treatment approach','Comfort-focused care'],photos:['assets/patient-result-2.jpg','assets/clinic-treatment-room.jpg','assets/patient-result-3.jpg']},
+ braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:['assets/patient-result-1.jpg','assets/patient-result-2.jpg','assets/patient-result-3.jpg']},
+ whitening:{title:'Teeth Whitening',tag:'Brighten your smile',description:'Professional teeth whitening can help improve the brightness of your smile with guidance based on your dental condition.',points:['Brighter-looking smile','Professional guidance','Personalised approach','Smile-focused results'],photos:['assets/patient-result-1.jpg','assets/patient-result-3.jpg','assets/clinic-consultation-area.jpg']},
+ crowns:{title:'Crowns & Capping',tag:'Restore strength',description:'Crowns and caps help restore the strength, shape and function of damaged teeth while supporting a natural-looking smile.',points:['Restores tooth function','Protects weakened teeth','Natural appearance','Treatment tailored to you'],photos:['assets/patient-result-2.jpg','assets/clinic-treatment-room.jpg','assets/patient-result-1.jpg']},
+ preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums and can identify dental concerns early.',points:['Routine dental care','Early problem detection','Oral hygiene guidance','Long-term smile care'],photos:['assets/clinic-consultation-area.jpg','assets/clinic-treatment-room.jpg','assets/patient-result-3.jpg']}
+};
+const details=document.getElementById('serviceDetails');
+const cards=document.querySelectorAll('.serviceCard');
+function showService(key){
+ const d=serviceData[key]; if(!d)return;
+ const wasOpen=details.classList.contains('open') && details.dataset.current===key;
+ if(wasOpen){details.classList.remove('open');cards.forEach(c=>c.classList.remove('active'));return;}
+ document.getElementById('detailTag').textContent=d.tag;
+ document.getElementById('detailTitle').textContent=d.title;
+ document.getElementById('detailDescription').textContent=d.description;
+ document.getElementById('detailPoints').innerHTML=d.points.map(x=>`<div class="servicePoint">✓ ${x}</div>`).join('');
+ document.getElementById('detailPhotos').innerHTML=d.photos.map((src,i)=>`<img class="${i===2?'wide':''}" src="${src}" alt="${d.title} photo">`).join('');
+ details.dataset.current=key;details.classList.add('open');
+ cards.forEach(c=>c.classList.toggle('active',c.dataset.service===key));
+ setTimeout(()=>details.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
+}
+cards.forEach(card=>card.addEventListener('click',()=>showService(card.dataset.service)));
 </script>
 </body>
 </html>
