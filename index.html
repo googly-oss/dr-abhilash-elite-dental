@@ -133,9 +133,13 @@ section{padding:84px 0}
 .reviews{background:var(--deep);color:#fff}
 .reviews .sectionHead h3{color:#fff}
 .reviews .sectionHead p{color:#b9c8d6}
+.ratingHighlight{display:inline-flex;align-items:center;gap:12px;margin:8px 0 24px;padding:12px 18px;border:1px solid #3f6680;border-radius:999px;background:linear-gradient(135deg,#123d5d,#0d2d47);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.ratingHighlight .ratingScore{font-size:22px;font-weight:900;color:#fff;line-height:1}
+.ratingHighlight .ratingStars{color:#f0b93e;letter-spacing:2px;font-size:18px;line-height:1}
+.ratingHighlight small{display:block;color:#b9c8d6;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
 .reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .review{background:#113452;border:1px solid #27516d;border-radius:20px;padding:24px}
-.stars{color:#f0b93e;letter-spacing:2px}
+.stars{color:#f0b93e;letter-spacing:2px;font-size:18px;margin-bottom:8px}
 .review p{color:#d7e4ec;line-height:1.7;font-size:14px}
 .review a{color:#fff;font-weight:700}
 .allReviews{display:inline-block;margin-top:28px;padding:13px 20px;border:1px solid #7290a5;border-radius:12px;color:#fff;font-weight:700}
@@ -350,7 +354,12 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
 
 <section class="reviews" id="reviews">
  <div class="container">
-  <div class="sectionHead"><div class="tag">Google reviews</div><h3>What our patients say.</h3><p>Real feedback from patients who visited the clinic.</p></div>
+  <div class="sectionHead"><div class="tag">Google reviews</div><h3>What our patients say.</h3><p>Real feedback from patients who visited the clinic.</p>
+   <div class="ratingHighlight" aria-label="Five star rated reviews">
+    <span class="ratingScore">5.0</span>
+    <span><span class="ratingStars">★★★★★</span><small>5-star patient feedback</small></span>
+   </div>
+  </div>
   <div class="reviewGrid">
    <div class="review"><div class="stars">★★★★★</div><p>“I had a wonderful experience with Dr Abhilash Chetia. I had a dental implant, root canal and cavity fillings done at the clinic.”</p><strong>— Suchila Sharma</strong></div>
    <div class="review"><div class="stars">★★★★★</div><p>“My regular doctor visits were smooth. The recovery after my scheduled procedure was speedy and booking was easy.”</p><strong>— Kongkona Tamuly</strong></div>
