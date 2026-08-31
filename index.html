@@ -78,6 +78,16 @@ section{padding:84px 0}
 .point b{display:block;font-size:18px;color:var(--deep)}
 .point span{color:var(--muted);font-size:14px}
 
+/* CLINIC GALLERY */
+.clinic{background:#f8fafc}
+.clinicGrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.clinicCard{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(20,53,80,.06)}
+.clinicCard img{display:block;width:100%;height:390px;object-fit:cover}
+.clinicCard div{padding:18px 20px;font-weight:800;color:var(--deep);font-size:18px}
+.experience{display:inline-flex;align-items:center;gap:9px;margin:16px 0 4px;padding:10px 16px;border-radius:999px;background:#102b4b;color:#fff;font-weight:800;font-size:14px}
+.doctorPhoto{height:480px;border-radius:30px;overflow:hidden;background:#eef4f7}
+.doctorPhoto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+
 /* SERVICES - CLICK TO EXPAND */
 .services{background:var(--bg)}
 .serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -182,8 +192,9 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  .primaryBtn{font-size:16px;padding:18px 23px}
  section{padding:68px 28px}
  .sectionHead h3{font-size:34px}
- .doctorGrid,.contactGrid{grid-template-columns:1fr;gap:34px}
- .photoPlaceholder{height:360px}
+ .doctorGrid,.contactGrid,.clinicGrid{grid-template-columns:1fr;gap:34px}
+ .photoPlaceholder,.doctorPhoto{height:420px}
+ .clinicCard img{height:300px}
  .doctorInfo h3{font-size:42px}
  .serviceGrid,.resultsGrid,.reviewGrid{grid-template-columns:1fr}
  .serviceCard{padding:22px}
@@ -243,7 +254,7 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
    </div>
   </a>
   <div class="navlinks">
-   <a href="#home">Home</a><a href="#doctor">Doctor</a><a href="#services">Services</a>
+   <a href="#home">Home</a><a href="#doctor">Doctor</a><a href="#clinic">Clinic</a><a href="#services">Services</a>
    <a href="#results">Results</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
   </div>
   <button class="menuBtn" aria-label="Open menu" onclick="toggleMenu()"><span></span></button>
@@ -264,15 +275,25 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  <div class="container">
   <div class="sectionHead"><div class="tag">Meet your dentist</div><h3>Meet the Doctor</h3><p>Dedicated to comfortable, modern and personalised dental care.</p></div>
   <div class="doctorGrid">
-   <div class="photoPlaceholder"><div><strong>DOCTOR PHOTO</strong><small>Add professional doctor image here later</small></div></div>
+   <div class="doctorPhoto"><img src="assets/dr-abhilash.jpg" alt="Dr. Abhilash at Dr. Abhilash's Elite Dental Clinic"></div>
    <div class="doctorInfo">
     <span class="role">BDS | Specialized in Implants &amp; Endodontics</span>
     <h3>Dr. Abhilash</h3>
+    <div class="experience">12+ Years of Experience</div>
     <p>Committed to helping patients achieve healthier, confident smiles with personalised and comfortable dental care.</p>
     <div class="point"><div class="pointIcon">🦷</div><div><b>Patient First</b><span>Your comfort and smile are always the priority.</span></div></div>
     <div class="point"><div class="pointIcon">✦</div><div><b>Modern Care</b><span>Advanced treatment with a gentle approach.</span></div></div>
     <div class="point"><div class="pointIcon">♡</div><div><b>Personalised Approach</b><span>Every patient receives care tailored to their needs.</span></div></div>
    </div>
+  </div>
+ </div>
+</section>
+<section class="clinic" id="clinic">
+ <div class="container">
+  <div class="sectionHead"><div class="tag">Our clinic</div><h3>A modern space for better dental care.</h3><p>Clean, comfortable and equipped to support quality dental treatment.</p></div>
+  <div class="clinicGrid">
+   <div class="clinicCard"><img src="assets/clinic-interior-1.jpg" alt="Modern dental treatment room"><div>Modern Dental Treatment Setup</div></div>
+   <div class="clinicCard"><img src="assets/clinic-interior-2.jpg" alt="Inside Dr. Abhilash's Elite Dental Clinic"><div>Inside Our Clinic</div></div>
   </div>
  </div>
 </section>
@@ -359,6 +380,7 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  <nav>
   <a href="#home" onclick="toggleMenu()">Home</a>
   <a href="#doctor" onclick="toggleMenu()">Doctor</a>
+  <a href="#clinic" onclick="toggleMenu()">Our Clinic</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
   <a href="#results" onclick="toggleMenu()">Results</a>
   <a href="#reviews" onclick="toggleMenu()">Reviews</a>
@@ -374,12 +396,12 @@ function toggleMenu(){
 
 // Service details: photos can reuse the existing Patient Results images without changing that section.
 const serviceData={
- implants:{title:'Dental Implants',tag:'Replace missing teeth',description:'Dental implants are a long-lasting option for replacing missing teeth and restoring the comfort, function and confidence of your smile.',points:['Natural-looking replacement','Stable and long-lasting','Improved chewing comfort','Personalised treatment planning'],photos:['assets/implant-xray.jpg']},
+ implants:{title:'Dental Implants',tag:'Replace missing teeth',description:'Dental implants are a long-lasting option for replacing missing teeth and restoring the comfort, function and confidence of your smile.',points:['Natural-looking replacement','Stable and long-lasting','Improved chewing comfort','Personalised treatment planning'],photos:['assets/implant-xray.jpg','assets/service-smile-result.jpg']},
  rootcanal:{title:'Root Canal Treatment',tag:'Endodontic care',description:'Root canal treatment focuses on saving an infected or damaged natural tooth while relieving pain and protecting your natural smile.',points:['Helps save natural teeth','Focused infection control','Modern treatment approach','Comfort-focused care'],photos:['assets/service-treatment.jpg']},
- braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:[]},
- whitening:{title:'Teeth Whitening',tag:'Brighten your smile',description:'Professional teeth whitening can help improve the brightness of your smile with guidance based on your dental condition.',points:['Brighter-looking smile','Professional guidance','Personalised approach','Smile-focused results'],photos:['assets/service-smile-result.jpg']},
+ braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:['assets/service-braces-orthodontics.jpg']},
+ whitening:{title:'Teeth Whitening',tag:'Brighten your smile',description:'Professional teeth whitening can help improve the brightness of your smile with guidance based on your dental condition.',points:['Brighter-looking smile','Professional guidance','Personalised approach','Smile-focused results'],photos:['assets/service-cleaning-result.jpg']},
  crowns:{title:'Crowns & Capping',tag:'Restore strength',description:'Crowns and caps help restore the strength, shape and function of damaged teeth while supporting a natural-looking smile.',points:['Restores tooth function','Protects weakened teeth','Natural appearance','Treatment tailored to you'],photos:['assets/service-crowns-before-after.jpg','assets/service-crown-restoration.jpg']},
- preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums and can identify dental concerns early.',points:['Routine dental care','Early problem detection','Oral hygiene guidance','Long-term smile care'],photos:['assets/service-cleaning-result.jpg']}
+ preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums and can identify dental concerns early.',points:['Routine dental care','Early problem detection','Oral hygiene guidance','Long-term smile care'],photos:[]}
 };
 const details=document.getElementById('serviceDetails');
 const cards=document.querySelectorAll('.serviceCard');
