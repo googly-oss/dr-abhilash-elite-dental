@@ -119,14 +119,14 @@ section{padding:84px 0}
 .servicePoints{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
 .servicePoint{background:#f3f8fa;border-radius:12px;padding:11px 13px;font-size:13px;font-weight:700;color:#365166}
 .servicePhotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.servicePhotos img{width:100%;height:180px;object-fit:cover;border-radius:16px;border:1px solid var(--line);background:#eef4f7}
-.servicePhotos img.wide{grid-column:1/-1;height:220px}
+.servicePhotos img{width:100%;aspect-ratio:4/3;height:auto;object-fit:contain;border-radius:16px;border:1px solid var(--line);background:#f7fafb;padding:2px}
+.servicePhotos img.wide{grid-column:1/-1;aspect-ratio:16/9;max-height:360px}
 .serviceCTA{margin-top:4px}
 
 /* RESULTS */
 .resultsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .result{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff}
-.result img{display:block;width:100%;height:340px;object-fit:cover}
+.result img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
 .result div{padding:15px;font-weight:700}
 
 /* REVIEWS */
@@ -214,10 +214,11 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
  .serviceCard{padding:22px}
  .serviceDetailInner{grid-template-columns:1fr;padding:24px}
  .serviceDetailInner h4{font-size:30px}
- .servicePhotos img{height:160px}
- .servicePhotos img.wide{height:200px}
+ .servicePhotos{grid-template-columns:1fr}
+ .servicePhotos img{aspect-ratio:4/3;max-height:none}
+ .servicePhotos img.wide{aspect-ratio:4/3;max-height:none}
  .servicePoints{grid-template-columns:1fr}
- .result img{height:300px}
+ .result img{height:auto;object-fit:contain}
 
  /* Premium floating WhatsApp button */
  .whatsapp{width:62px;height:62px;right:18px;bottom:18px;border:0;background:#25D366;
@@ -323,6 +324,11 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
    <button class="serviceCard" type="button" data-service="whitening"><div class="cardIcon">✨</div><h4>Teeth Whitening</h4><p>Brighten your smile safely.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
    <button class="serviceCard" type="button" data-service="crowns"><div class="cardIcon">◆</div><h4>Crowns &amp; Capping</h4><p>Restore strength and natural function.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
    <button class="serviceCard" type="button" data-service="preventive"><div class="cardIcon">♡</div><h4>Preventive Dentistry</h4><p>Routine care for long-term oral health.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="filling"><div class="cardIcon">✦</div><h4>Tooth Filling</h4><p>Repair cavities and restore damaged teeth.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="scaling"><div class="cardIcon">✧</div><h4>Scaling &amp; Teeth Cleaning</h4><p>Professional cleaning for healthier teeth and gums.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="impaction"><div class="cardIcon">⚕</div><h4>Impaction Surgery</h4><p>Surgical care for impacted teeth.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="bridge"><div class="cardIcon">◆</div><h4>Crown &amp; Bridge</h4><p>Restore damaged or missing teeth with custom restorations.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
+   <button class="serviceCard" type="button" data-service="dentures"><div class="cardIcon">⌁</div><h4>Dentures</h4><p>Complete and partial dentures for comfortable tooth replacement.</p><div class="serviceHint">View treatment details <span>+</span></div></button>
   </div>
 
   <!-- Opens when a service is clicked. Existing Patient Results below remain unchanged. -->
@@ -337,8 +343,7 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
     </div>
     <div class="servicePhotos" id="detailPhotos"></div>
    </div>
-  </div>
- </div>
+  </div></div>
 </section>
 
 <section id="results">
@@ -347,10 +352,10 @@ footer{background:#061d2c;color:#b9c8d1;padding:28px 0;font-size:13px}
   <div class="resultsGrid">
    <div class="result"><img src="assets/patient-result-1.jpg" alt="Treatment result"><div>Smile correction</div></div>
    <div class="result"><img src="assets/patient-result-2.jpg" alt="Treatment result"><div>Dental treatment</div></div>
-   <div class="result"><img src="assets/patient-result-3.jpg" alt="Treatment result"><div>Smile rehabilitation</div></div>
+   <div class="result"><img src="assets/patient-result-3.jpg" alt="Treatment result"><div>Patient Treatment</div></div>
    <div class="result"><img src="assets/patient-result-4.png" alt="Patient dental transformation"><div>Smile transformation</div></div>
-   <div class="result"><img src="assets/patient-result-5.png" alt="Denture treatment result"><div>Dental restoration</div></div>
-   <div class="result"><img src="assets/patient-result-6.png" alt="Before and after dental treatment"><div>Complete smile makeover</div></div>
+   <div class="result"><img src="assets/patient-result-5.png" alt="Complete denture treatment result"><div>Complete Denture</div></div>
+   <div class="result"><img src="assets/patient-result-6.png" alt="Patient treatment result"><div>Patient Treatment Result</div></div>
    <div class="result"><img src="assets/patient-result-7.jpg" alt="Patient treatment result"><div>Patient treatment result</div></div>
    <div class="result"><img src="assets/patient-result-8.jpg" alt="Patient dental result"><div>Smile transformation</div></div>
   </div>
@@ -426,7 +431,12 @@ const serviceData={
  braces:{title:'Braces & Orthodontics',tag:'Better alignment',description:'Orthodontic treatment helps improve tooth alignment, bite and smile aesthetics through carefully planned treatment.',points:['Improved alignment','Better bite support','Personalised planning','Healthier smile goals'],photos:['assets/service-braces-real-result.jpg','assets/service-braces-orthodontics.jpg']},
  whitening:{title:'Teeth Whitening',tag:'Brighten your smile',description:'Professional teeth whitening can help improve the brightness of your smile with guidance based on your dental condition.',points:['Brighter-looking smile','Professional guidance','Personalised approach','Smile-focused results'],photos:['assets/service-cleaning-result.jpg']},
  crowns:{title:'Crowns & Capping',tag:'Restore strength',description:'Crowns and caps help restore the strength, shape and function of damaged teeth while supporting a natural-looking smile.',points:['Restores tooth function','Protects weakened teeth','Natural appearance','Treatment tailored to you'],photos:['assets/service-crowns-before-after.jpg','assets/service-crown-restoration.jpg']},
- preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums, reduce the risk of common dental problems and identify concerns early.',points:['Routine dental check-ups','Professional cleaning','Early problem detection','Oral hygiene guidance'],photos:['assets/service-cleaning-result.jpg','assets/service-preventive-care.jpg']}
+ preventive:{title:'Preventive Dentistry',tag:'Protect your smile',description:'Regular preventive care helps maintain healthy teeth and gums, reduce the risk of common dental problems and identify concerns early.',points:['Routine dental check-ups','Professional cleaning','Early problem detection','Oral hygiene guidance'],photos:['assets/clinic-interior-1.jpg','assets/service-cleaning-result.jpg']},
+ filling:{title:'Tooth Filling',tag:'Restore damaged teeth',description:'Tooth-coloured fillings are used to repair cavities and minor tooth damage while restoring comfortable everyday function.',points:['Cavity repair','Natural-looking restoration','Restores tooth function','Conservative treatment approach'],photos:['assets/patient-result-7.jpg']},
+ scaling:{title:'Scaling & Teeth Cleaning',tag:'Professional oral cleaning',description:'Professional scaling and cleaning help remove plaque and tartar and support healthier gums and fresher oral hygiene.',points:['Plaque and tartar removal','Supports gum health','Improves oral hygiene','Professional cleaning care'],photos:['assets/service-cleaning-result.jpg']},
+ impaction:{title:'Impaction Surgery',tag:'Surgical dental care',description:'Impaction surgery is used to manage teeth that are trapped or unable to erupt normally, including selected wisdom tooth cases.',points:['Assessment and treatment planning','Surgical management when required','Comfort-focused care','Post-treatment guidance'],photos:['assets/clinic-treatment-room.jpg']},
+ bridge:{title:'Crown & Bridge',tag:'Restore teeth and function',description:'Custom crowns and bridges help restore damaged or missing teeth with functional and natural-looking dental restorations.',points:['Restores damaged teeth','Replaces selected missing teeth','Supports chewing function','Custom restorative planning'],photos:['assets/service-crowns-before-after.jpg','assets/service-crown-restoration.jpg']},
+ dentures:{title:'Dentures',tag:'Comfortable tooth replacement',description:'Complete and partial dentures are planned to replace missing teeth and improve comfort, appearance and everyday function.',points:['Complete and partial options','Improves chewing support','Restores smile appearance','Personalised fit and planning'],photos:['assets/patient-result-5.png']}
 };
 const details=document.getElementById('serviceDetails');
 const cards=document.querySelectorAll('.serviceCard');
